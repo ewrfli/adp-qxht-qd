@@ -45,6 +45,18 @@ export default [{
     component: './TableList',
   },
   {
+    name: 'page4',
+    icon: 'crown',
+    path: '/BBS',
+    component: './BBS',
+  },
+  {
+    name: '个人',
+    icon: 'crown',
+    path: '/account/settings',
+    component: './account/settings',
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },
