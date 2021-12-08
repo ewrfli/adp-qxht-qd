@@ -1,10 +1,16 @@
 // https://umijs.org/config/
-import { defineConfig } from 'umi';
-import { join } from 'path';
+import {
+  defineConfig
+} from 'umi';
+import {
+  join
+} from 'path';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
-const { REACT_APP_ENV } = process.env;
+const {
+  REACT_APP_ENV
+} = process.env;
 export default defineConfig({
   hash: true,
   antd: {},
@@ -16,6 +22,15 @@ export default defineConfig({
     locale: true,
     siderWidth: 208,
     ...defaultSettings,
+
+    //
+    "navTheme": "light",
+    "primaryColor": "#1890ff",
+    "layout": "top",
+    "contentWidth": "Fixed",
+    "fixedHeader": true,
+    "fixSiderbar": true,
+    "splitMenus": false
   },
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
@@ -49,8 +64,7 @@ export default defineConfig({
   },
   // Fast Refresh 热更新
   fastRefresh: {},
-  openAPI: [
-    {
+  openAPI: [{
       requestLibPath: "import { request } from 'umi'",
       // 或者使用在线的版本
       // schemaPath: "https://gw.alipayobjects.com/os/antfincdn/M%24jrzTTYJN/oneapi.json"
