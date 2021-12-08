@@ -13,11 +13,8 @@ const CodePreview = ({ children }) => (
 const Welcome = () => {
   // const intl = useIntl();
   return (
-    <PageContainer>
-      <Card>
-       
-      </Card>
-    </PageContainer>
+    <Card>
+    </Card>
   );
 };
 

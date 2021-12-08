@@ -9,8 +9,8 @@ const Settings = {
   colorWeak: false,
   title: '企业风险资讯系统',
   pwa: false,
-  // logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  logo: 'http://101.132.119.44:7001/img/pc/logo1.png',
+  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg', //左上角logo
+  // logo: 'http://101.132.119.44:7001/img/pc/logo1.png',
   iconfontUrl: '',
 };
 export default Settings;
