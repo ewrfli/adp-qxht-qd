@@ -28,7 +28,7 @@ const operationTabList = [
     key: 'applications',
     tab: (
       <span>
-        应用{' '}
+        公司{' '}
         <span
           style={{
             fontSize: 14,

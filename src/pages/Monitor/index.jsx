@@ -8,7 +8,6 @@ const Monitor = () => {
   const intl = useIntl();
   return (
     <Card></Card>
-    
     // <PageHeaderWrapper
     //   content={intl.formatMessage({
     //     id: 'pages.admin.subPage.title',

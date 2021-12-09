@@ -16,16 +16,16 @@ export default [{
   },
   {
     path: '/welcome',
-    name: 'page1',
+    name: '首页',
     icon: 'smile',
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: 'page2',
+    path: '/monitor',
+    name: '监控',
     icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
+    // access: 'canAdmin',
+    component: './Monitor',
     // routes: [
     //   {
     //     path: '/admin/sub-page',
@@ -39,20 +39,26 @@ export default [{
     // ],
   },
   {
-    name: 'page3',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
-  },
-  {
-    name: 'page4',
+    name: '资讯',
     icon: 'crown',
-    path: '/BBS',
+    path: '/bbs',
     component: './BBS',
   },
   {
+    name: '服务',
+    icon: 'table',
+    path: '/vip',
+    component: './VIP',
+  },
+  {
     name: '个人',
-    icon: 'crown',
+    icon: 'smile',
+    path: '/account/center',
+    component: './account/center',
+  },
+  {
+    name: '设置',
+    icon: 'smile',
     path: '/account/settings',
     component: './account/settings',
   },

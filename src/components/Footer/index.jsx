@@ -6,16 +6,16 @@ const Footer = () => {
   const intl = useIntl();
   const defaultMessage = intl.formatMessage({
     id: 'app.copyright.produced',
-    defaultMessage: '企业风险资讯平台',
+    defaultMessage: '   企业风险资讯平台',
   });
   const currentYear = new Date().getFullYear();
   return (
     <DefaultFooter
-      copyright={`${currentYear} 企业风险资讯平台`}
+      copyright={`${currentYear}   企业风险资讯平台`}
       links={[
         {
           key: 'Enterprise Risk',
-          title: 'Enterprise Risk',
+          title: 'Enterprise',
           href: '',
           blankTarget: true,
         },
@@ -27,7 +27,7 @@ const Footer = () => {
         },
         {
           key: 'Information Platform',
-          title: 'Information Platform',
+          title: 'Platform',
           href: '',
           blankTarget: true,
         },
