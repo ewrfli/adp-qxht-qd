@@ -6,7 +6,7 @@ import { useIntl } from 'umi';
 import { PageContainer } from '@ant-design/pro-layout';
 import { Input } from 'antd';
 import { history } from 'umi';
-
+import { Applications } from './applications';
 
 const handleFormSubmit = (value) => {
   // eslint-disable-next-line no-console
@@ -36,7 +36,7 @@ const Monitor = () => {
         </div>
       }
     >
-      <Card></Card>
+      <Applications></Applications>
     </PageContainer>
   );
 };
