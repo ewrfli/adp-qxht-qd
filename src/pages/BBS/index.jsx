@@ -1,21 +1,88 @@
-import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Alert, Typography } from 'antd';
-import { useIntl, FormattedMessage } from 'umi';
-import styles from './index.less';
+import { Input } from 'antd';
+import { history } from 'umi';
+const tabList = [
+  {
+    key: 'articles',
+    tab: '讨论',
+  },
+  {
+    key: 'applications',
+    tab: '公司',
+  },
+  {
+    key: 'projects',
+    tab: '项目',
+  },
+];
 
-const CodePreview = ({ children }) => (
-  <pre className={styles.pre}>
+const Search = (props) => {
+  const handleTabChange = (key) => {
+    const { match } = props;
+    const url = match.url === '/' ? '' : match.url;
 
-  </pre>
-);
+    switch (key) {
+      case 'articles':
+        history.push(`${url}/articles`);
+        break;
 
-const BBS = () => {
-  // const intl = useIntl();
+      case 'applications':
+        history.push(`${url}/applications`);
+        break;
+
+      case 'projects':
+        history.push(`${url}/projects`);
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  const handleFormSubmit = (value) => {
+    // eslint-disable-next-line no-console
+    console.log(value);
+  };
+
+  const getTabKey = () => {
+    const { match, location } = props;
+    const url = match.path === '/' ? '' : match.path;
+    const tabKey = location.pathname.replace(`${url}/`, '');
+
+    if (tabKey && tabKey !== '/') {
+      return tabKey;
+    }
+
+    return 'articles';
+  };
+
   return (
-    <Card>
-    </Card>
+    <PageContainer
+      content={
+        <div
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          <Input.Search
+            placeholder="请输入"
+            enterButton="搜索"
+            size="large"
+            onSearch={handleFormSubmit}
+            style={{
+              maxWidth: 522,
+              width: '100%',
+            }}
+          />
+        </div>
+      }
+      tabList={tabList}
+      tabActiveKey={getTabKey()}
+      onTabChange={handleTabChange}
+    >
+      {props.children}
+    </PageContainer>
   );
 };
 
-export default BBS;
+export default Search;

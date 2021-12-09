@@ -43,6 +43,28 @@ export default [{
     icon: 'crown',
     path: '/bbs',
     component: './BBS',
+    routes: [{
+        path: '/bbs/articles',
+        name: '讨论',
+        icon: 'smile',
+        component: './BBS/articles',
+      },
+      {
+        path: '/bbs/applications',
+        name: '公司',
+        icon: 'smile',
+        component: './BBS/applications',
+      },
+      {
+        path: '/bbs/projects',
+        name: '项目',
+        icon: 'smile',
+        component: './BBS/projects',
+      },
+      {
+        component: './404',
+      },
+    ]
   },
   {
     name: '服务',

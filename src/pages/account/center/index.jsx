@@ -13,7 +13,7 @@ const operationTabList = [
     key: 'articles',
     tab: (
       <span>
-        文章{' '}
+        讨论{' '}
         <span
           style={{
             fontSize: 14,
