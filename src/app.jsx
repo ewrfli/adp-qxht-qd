@@ -23,7 +23,7 @@ export async function getInitialState() {
     } catch (error) {
       history.push(loginPath);
     }
-
+    
     return undefined;
   }; // 如果是登录页面，不执行
 

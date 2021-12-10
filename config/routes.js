@@ -14,12 +14,21 @@ export default [{
       },
     ],
   },
+
   {
-    path: '/welcome',
     name: '首页',
+    path: '/home',
     icon: 'smile',
-    component: './Welcome',
+    component: './Home'
   },
+
+  // {
+  //   path: '/welcome',
+  //   name: '首页',
+  //   icon: 'smile',
+  //   component: './Welcome',
+  // },
+
   {
     path: '/monitor',
     name: '监控',
@@ -73,20 +82,26 @@ export default [{
     component: './VIP',
   },
   {
-    name: '个人',
+    name: '我的',
     icon: 'smile',
     path: '/account/center',
     component: './account/center',
   },
   {
-    name: '设置',
-    icon: 'smile',
+    // name: '设置',
+    // icon: 'smile',
     path: '/account/settings',
     component: './account/settings',
   },
+
+  {
+    path: '/monitor/base',
+    component: './Monitor/base',
+  },
+
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/home',
   },
   {
     component: './404',

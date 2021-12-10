@@ -27,10 +27,12 @@ export default defineConfig({
     "navTheme": "light",
     "primaryColor": "#1890ff",
     "layout": "top",
-    "contentWidth": "Fixed",
+    "contentWidth": "Fluid",
     "fixedHeader": true,
     "fixSiderbar": true,
     "splitMenus": false
+
+    //
   },
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {

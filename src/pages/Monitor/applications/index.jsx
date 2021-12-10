@@ -16,6 +16,7 @@ import styles from './style.less';
 const handleOnClick = () => {
   // eslint-disable-next-line no-console
   console.log('value');
+  
 };
 
 const { Option } = Select;
@@ -73,7 +74,7 @@ export const Applications = () => {
   const { data, loading, run } = useRequest((values) => {
     console.log('form data', values);
     return queryFakeList({
-      count: 8,
+      count: 16,
     });
   });
   const list = data?.list || [];

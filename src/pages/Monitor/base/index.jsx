@@ -4,7 +4,7 @@ import { Card, Typography, Alert } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { useIntl } from 'umi';
 
-const Monitor = () => {
+const Base = () => {
   const intl = useIntl();
   return (
     <Card></Card>
@@ -13,4 +13,4 @@ const Monitor = () => {
   );
 };
 
-export default Monitor;
+export default Base;

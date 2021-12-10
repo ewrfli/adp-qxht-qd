@@ -65,7 +65,7 @@ const AvatarDropdown = ({ menu }) => {
 
   const menuHeaderDropdown = (
     <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
-      {menu && (
+      {/* {menu && (
         <Menu.Item key="center">
           <UserOutlined />
           个人中心
@@ -77,7 +77,17 @@ const AvatarDropdown = ({ menu }) => {
           个人设置
         </Menu.Item>
       )}
-      {menu && <Menu.Divider />}
+      {menu && <Menu.Divider />} */}
+
+      <Menu.Item key="center">
+        <UserOutlined />
+        个人中心
+      </Menu.Item>  
+
+      <Menu.Item key="settings">
+        <SettingOutlined />
+        个人设置
+      </Menu.Item> 
 
       <Menu.Item key="logout">
         <LogoutOutlined />
