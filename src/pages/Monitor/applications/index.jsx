@@ -12,10 +12,13 @@ import StandardFormRow from './components/StandardFormRow';
 import TagSelect from './components/TagSelect';
 import { queryFakeList } from './service';
 import styles from './style.less';
+import { history } from 'umi';
 
 const handleOnClick = () => {
   // eslint-disable-next-line no-console
-  console.log('value');
+  console.log('location',location.href);
+  // let url = location.href;
+  history.push(`/monitor/base`);
   
 };
 
