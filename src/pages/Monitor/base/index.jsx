@@ -35,8 +35,8 @@ class Base extends React.Component {
               <TabPane tab="Card Tab 3" key="3">
                 Content of card tab 3
               </TabPane>
-              <TabPane tab="Card Tab 4" key="3">
-                Content of card tab 3
+              <TabPane tab="Card Tab 4" key="4">
+                Content of card tab 4
               </TabPane>
             </Tabs>
           </Card>
