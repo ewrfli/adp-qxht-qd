@@ -43,20 +43,20 @@ class Base extends React.Component {
         <Content style={{ padding: '0 0' }}>
           {/* <Card style={{ paddingTop: '0px' }}> */}
             <Tabs defaultActiveKey="1" type="card" size={size}>
-              <TabPane tab="Card Tab 1" key="1">
+              <TabPane tab="基本信息" key="1">
                 <Tab1></Tab1>
               </TabPane>
 
-              <TabPane tab="Card Tab 2" key="2">
+              <TabPane tab="预警信息" key="2">
                 <Tab2></Tab2>
               </TabPane>
 
 
-              <TabPane tab="Card Tab 3" key="3">
+              <TabPane tab="周边风险" key="3">
               <Tab3></Tab3>
               </TabPane>
 
-              <TabPane tab="Card Tab 4" key="4">
+              <TabPane tab="自身风险" key="4">
               <Tab4></Tab4>
               </TabPane>
             </Tabs>

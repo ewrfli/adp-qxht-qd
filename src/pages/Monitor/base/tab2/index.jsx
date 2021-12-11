@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line } from '@ant-design/charts';
+import { Line, Bullet } from '@ant-design/charts';
 import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 import { Layout, Card, Typography, Alert, Tabs, Radio, Row, Col } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
@@ -15,33 +15,125 @@ export class Tab2 extends React.Component {
   render() {
     const { size } = this.state;
     const data = [
-      { year: '1991', value: 3 },
-      { year: '1992', value: 4 },
-      { year: '1993', value: 3.5 },
-      { year: '1994', value: 5 },
-      { year: '1995', value: 4.9 },
-      { year: '1996', value: 6 },
-      { year: '1997', value: 7 },
-      { year: '1998', value: 9 },
-      { year: '1999', value: 13 },
+      {
+        title: '公司1',
+        ranges: [30, 90, 120],
+        measures: [65],
+        target: 80,
+      },
+      {
+        title: '公司2',
+        ranges: [30, 90, 120],
+        measures: [50],
+        target: 100,
+      },
+      {
+        title: '公司3',
+        ranges: [30, 90, 120],
+        measures: [40],
+        target: 85,
+      },
+      {
+        title: '公司4',
+        ranges: [30, 90, 120],
+        measures: [50],
+        target: 100,
+      },
     ];
     const config = {
       data,
-      height: 400,
-      xField: 'year',
-      yField: 'value',
-      point: {
-        size: 5,
-        shape: 'diamond',
+      measureField: 'measures',
+      rangeField: 'ranges',
+      targetField: 'target',
+      xField: 'title',
+      color: {
+        range: ['#FFbcb8', '#FFe0b0', '#bfeec8'],
+        measure: '#5B8FF9',
+        target: '#39a3f4',
+      },
+      label: {
+        measure: {
+          position: 'middle',
+          style: {
+            fill: '#fff',
+          },
+        },
+      },
+      xAxis: {
+        line: null,
+      },
+      yAxis: false,
+      // 自定义 legend
+      legend: {
+        custom: true,
+        position: 'bottom',
+        items: [
+          {
+            value: '差',
+            name: '差',
+            marker: {
+              symbol: 'square',
+              style: {
+                fill: '#FFbcb8',
+                r: 5,
+              },
+            },
+          },
+          {
+            value: '良',
+            name: '良',
+            marker: {
+              symbol: 'square',
+              style: {
+                fill: '#FFe0b0',
+                r: 5,
+              },
+            },
+          },
+          {
+            value: '优',
+            name: '优',
+            marker: {
+              symbol: 'square',
+              style: {
+                fill: '#bfeec8',
+                r: 5,
+              },
+            },
+          },
+          {
+            value: '实际值',
+            name: '实际值',
+            marker: {
+              symbol: 'square',
+              style: {
+                fill: '#5B8FF9',
+                r: 5,
+              },
+            },
+          },
+          {
+            value: '目标值',
+            name: '目标值',
+            marker: {
+              symbol: 'line',
+              style: {
+                stroke: '#39a3f4',
+                r: 5,
+              },
+            },
+          },
+        ],
       },
     };
     return (
 
 
               <Row>
-                <Col span={6}> <Card style={{ width: '300px' }}><Line {...config} /></Card> </Col>
-                <Col span={6}> <Card style={{ width: '300px' }}><Line {...config} /></Card> </Col>
-
+                <Col span={6}> <Card style={{ width: '300px' }}><Bullet {...config} /></Card> </Col>
+                <Col span={6}> <Card style={{ width: '300px' }}><Bullet {...config} /></Card> </Col>
+                <Col span={6}> <Card style={{ width: '300px' }}><Bullet {...config} /></Card> </Col>
+                <Col span={6}> <Card style={{ width: '300px' }}><Bullet {...config} /></Card> </Col>
               </Row>
 
     );
