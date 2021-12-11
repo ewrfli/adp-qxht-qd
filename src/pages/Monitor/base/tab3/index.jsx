@@ -4,15 +4,12 @@ import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 import { Layout, Card, Typography, Alert, Tabs, Radio, Row, Col } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { useIntl } from 'umi';
-import { Tab1 } from './tab1'
-import { Tab2 } from './tab2'
-import { Tab3 } from './tab3'
-import { Tab4 } from './tab4'
+
 const { Header, Content, Footer, Sider } = Layout;
 const { TabPane } = Tabs;
 
 
-class Base extends React.Component {
+export class Tab3 extends React.Component {
   state = { size: 'small' };
 
   render() {
@@ -39,33 +36,17 @@ class Base extends React.Component {
       },
     };
     return (
-      <Layout> 
-        <Content style={{ padding: '0 0' }}>
-          {/* <Card style={{ paddingTop: '0px' }}> */}
-            <Tabs defaultActiveKey="1" type="card" size={size}>
-              <TabPane tab="Card Tab 1" key="1">
-                <Tab1></Tab1>
-              </TabPane>
-
-              <TabPane tab="Card Tab 2" key="2">
-                <Tab2></Tab2>
-              </TabPane>
 
 
-              <TabPane tab="Card Tab 3" key="3">
-              <Tab3></Tab3>
-              </TabPane>
+              <Row>
+                <Col span={6}> <Card style={{ width: '300px' }}><Line {...config} /></Card> </Col>
+                <Col span={6}> <Card style={{ width: '300px' }}><Line {...config} /></Card> </Col>
+                <Col span={6}> <Card style={{ width: '300px' }}><Line {...config} /></Card> </Col>
+              </Row>
 
-              <TabPane tab="Card Tab 4" key="4">
-              <Tab4></Tab4>
-              </TabPane>
-            </Tabs>
-          {/* </Card> */}
-        </Content>
-      </Layout>
     );
   }
 }
 
 
-export default Base;
+export default  Tab3;

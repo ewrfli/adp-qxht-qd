@@ -98,7 +98,6 @@ export default [{
     path: '/monitor/base',
     component: './Monitor/base',
   },
-
   {
     path: '/',
     redirect: '/home',
